@@ -16,3 +16,6 @@ export class DemoComponent{
 }
 
 
+
+
+// ng g c <componentname>
