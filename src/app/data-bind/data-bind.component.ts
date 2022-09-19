@@ -6,28 +6,28 @@ import { Component } from '@angular/core';
   styleUrls: ['./data-bind.component.css'],
 })
 export class DataBindComponent {
-  
- 
   controlNumber = 10;
-  controlType = "text";
+  controlType = 'text';
 
+  TodayDate: any;
   constructor() {
     // this.control();
+    this.TodayDate = new Date();
   }
 
   control() {
-    switch(this.controlNumber){
-        case 10 :{
-           this.controlType = "radio";
-           break;
-        }
-        case 20:{
-          this.controlType = "checkbox";
-          break;
-        }
-        default : {
-           this.controlType = "text";
-        }
+    switch (this.controlNumber) {
+      case 10: {
+        this.controlType = 'radio';
+        break;
+      }
+      case 20: {
+        this.controlType = 'checkbox';
+        break;
+      }
+      default: {
+        this.controlType = 'text';
+      }
     }
   }
 
@@ -39,16 +39,13 @@ export class DataBindComponent {
 
   Location = 'Bangolore';
 
-
-  Fired(){
-     console.log("it is executing..... Thanks much");
+  Fired() {
+    console.log('it is executing..... Thanks much');
   }
 
-  evtControlCheck(){
+  evtControlCheck() {
     this.control();
   }
-
-
 
   // i want to apply the my stuff to the property of the element then you can
   // use property databinding.
@@ -61,4 +58,38 @@ export class DataBindComponent {
   // iam not declaring the function name
   // directluy i am writng the method name.
   // analysis
+
+  Name = 'Angular';
+
+  ShowMessage(myMsg: HTMLInputElement) {
+    console.log(myMsg.value);
+    console.log('Key pressing .........');
+  }
+
+  
+  Skill = 'Angular';
+
+  evtMessage(evtDetails: any) {
+    console.log(evtDetails);
+  }
+
+
+
+
+
+  Role = "Sofware Engineer";
+
+  evtRole(UpdatedRecord:any){
+     console.log(UpdatedRecord);
+     this.Role = UpdatedRecord;
+    // console.log("ngModel changes is triggering");
+  }
+
+
+  DevelopedBy = "GoogleTeam"
+
+
+
+
+
 }

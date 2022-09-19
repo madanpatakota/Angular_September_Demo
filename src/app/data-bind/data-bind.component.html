@@ -9,6 +9,7 @@
 the way u r making the relationship
 between the template and ts file -->
 
+{{TodayDate}}
 {{CourseName}}
 {{getCourseName()}}
 
@@ -32,6 +33,90 @@ between the template and ts file -->
 <button  
 (click) = "evtControlCheck()">
 Decide the my ControlName</button>
+
+
+<!-- 
+
+ 1. Can we create 
+ property databinding and event datinding together to 
+ the single element? -->
+  <!-- Yes we do -->
+
+ 
+<!-- 2. Can i pass the textbox value ==> "Angular" to the event(keypress) -->
+<!-- A :We can do  Local Ref variable concept----> 
+   
+
+
+
+<!-- Ex : I am taking the Input textBox -->
+
+
+<input type ="text" 
+  [value]="Name"
+  (keypress)="ShowMessage(message)" #message/>
+
+
+
+
+<!-- 
+3.What ever you are applying the event(keypress)
+  Can i get the more details of the event.
+  why mean Based on the event i want to learn.
+A : yes you can by using the $event -->
+<!-- 
+value what ever i am dong the html
+keypres also -->
+<input type ="text" 
+[value]="Skill"
+(keypress)="evtMessage($event)"/>
+
+
+<!-- [(xyzabc)] -->
+
+<!-- 
+Q)YOu are applying property datbinginding 
+and event databinding like [] and () 
+
+can i apply the same thing by using a single keyword
+any ? is their any option in angular ?
+Ans : Yes we can do that -->
+<!-- [(ngModel)] -->
+
+<!-- 
+Meaning 
+i am attaching the value to the angular Model
+I am montioring the angualr Model by angualr Model Change -->
+
+<hr>
+<input type="text" 
+        [ngModel]="Role"                    
+        (ngModelChange)="evtRole($event)" />
+
+    <p>Oupt put is --->  <strong>{{Role}}</strong></p>
+
+
+<hr>
+<!-- can i apply the same thing by using a single keyword
+any ? is their any option in angular ?
+Ans : Yes we can do that --> -->
+<!-- [(ngModel)] -->
+
+<!-- Diff is here i did't use the propery or eventdatabinigng but i am mixing int -->
+<input type="text" 
+        [(ngModel)]="DevelopedBy" 
+        />
+<p>Oupt put is --->  <strong>{{DevelopedBy}}</strong></p>
+
+
+
+
+
+
+
+
+
+
 
 
 
