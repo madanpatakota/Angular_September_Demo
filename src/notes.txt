@@ -10,3 +10,63 @@ First step : Move your changes into the stage(who is ready to go inside)
 and then push your changes.
 Second step : you have to commit the your changes(we have to give committment.)
 Third Step : push the code into the Repo.
+
+
+
+
+
+
+
+
+
+
+ ngModel -- > is the kind of directives which recognies by the angular
+
+ Directive ---> kind of component but do't have the template.
+     More Explanation : Directive which modify the existing behaviour to the element in the template(.html) 
+
+
+ <app-root></app-root>    .html -> template
+
+ ngModel 
+
+ Q) wheather we are having the different directivies like ngModel ?
+ yes we are having different directvies 
+
+
+
+ Q) ngModel which kind of directive?
+ A : 
+
+
+ Q) What kind of directives we are having?
+
+    Attribute directives                 : ngStyle , ngClass         // Here the matter is we are just applying the style.
+                                                                    // that means that we are not removing the element
+                                                                    // from the DOM
+    
+    Structural directives                : ngFor, ngIf, ngSwitch    // Based on the condition we are going to decide wheather we 
+                                                                       are going to add the element or remove the element
+                                                                    // in the Dom..
+
+    //Create own Directives
+    user Defined Directives                                        // wheater ie.. Attribute directive or nonstructal directive
+    |Custom directives
+    | Deverloper defined Directives      : ngSample
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

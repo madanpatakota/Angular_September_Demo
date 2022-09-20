@@ -1,0 +1,34 @@
+<p style="background-color: red">Hello World.</p>
+
+<p [ngStyle]="{ 'background-color': 'green' }">Angular Style....</p>
+
+<p [ngStyle]="{ 'background-color': cname == 'Angular_one' ? 'red' : 'green' }">
+  Angular dynamic Style....
+</p>
+
+<hr />
+
+<!-- Q) if i want to hide the element i know that that style is visibility : hidden -->
+<!-- that means that we really remove that element from the DOM ? -->
+
+<!-- <p style="visibility: hidden">Hello World. Display me</p>
+<p style="visibility: visible">Hello World. Display me</p> -->
+
+<p [ngStyle]="{ visibility: isShow == true ? 'visible' : 'hidden' }">
+  Angular dynamic Visible Style....
+</p>
+
+<hr />
+
+
+<p class="content"> sample 1 </p>
+<p class="nocontent">sample 2</p>
+
+<p [ngClass]="'content'"></p>
+<!-- <p [ngClass]="content"></p> --> 
+<!-- expecting the content keyworkd from the .ts file -->
+
+<p 
+[ngClass]="canApply == true ? 'content' : 'nocontent'">
+    ngclass added.
+</p>
