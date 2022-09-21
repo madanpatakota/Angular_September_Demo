@@ -8,5 +8,11 @@ if (environment.production) {
   enableProdMode();
 }
 
+// main file -> i can see the appmodule as the startupmodule
+
+// 1. what is the module
+
+// collection of components
+
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
