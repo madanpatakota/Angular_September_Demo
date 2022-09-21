@@ -6,13 +6,15 @@ import { DemoComponent } from './Demo/demo.component';
 import { DataBindComponent } from './data-bind/data-bind.component';
 import { FormsModule } from '@angular/forms';
 import { DemoDirComponent } from './demo-dir/demo-dir.component';
+import { DecoratorsComponent } from './decorators/decorators.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DemoComponent,
     DataBindComponent,
-    DemoDirComponent
+    DemoDirComponent,
+    DecoratorsComponent
   ],
   imports: [
     BrowserModule,

@@ -20,15 +20,86 @@
 
 <hr />
 
-
-<p class="content"> sample 1 </p>
+<p class="content">sample 1</p>
 <p class="nocontent">sample 2</p>
 
 <p [ngClass]="'content'"></p>
-<!-- <p [ngClass]="content"></p> --> 
+<!-- <p [ngClass]="content"></p> -->
 <!-- expecting the content keyworkd from the .ts file -->
 
-<p 
-[ngClass]="canApply == true ? 'content' : 'nocontent'">
-    ngclass added.
-</p>
+<p [ngClass]="canApply == true ? 'content' : 'nocontent'">ngclass added.</p>
+
+<hr />
+
+<!-- Q) What is exactly use of the structural directive ?
+A
+
+ : by using this we can remove or add the element in the dom by using the some condition -->
+
+<!-- Case study 
+1 . i want to show the element
+2. but by default it should't render
+3. It should it render when ever my condition is going to be false
+
+
+That means the element should render in the dom whenever i am going to call that
+until and then it should't render.
+
+-->
+
+<div *ngIf="permission; else help">
+  <p>Customer Name</p>
+  <input type="text" [value]="name" />
+  <!-- 100 lines of code -->
+</div>
+
+<ng-template #help>
+  <p>You do't have the permission to see the customer details</p>
+</ng-template>
+
+<hr />
+<!-- 
+Q) what is *ngFor?
+ngFor is structual directives which deails multi values -->
+
+<!-- ul table  -->
+
+<ul>
+  <li>one</li>
+  <li>two</li>
+  <li>three</li>
+</ul>
+
+<ul>
+  <!-- Here li will loop the 3 times
+  each time item value contains the current reference -->
+  <li *ngFor="let item of Locationnames">
+    <!-- {{ item }} -->
+    <input type="text" [value]="item" />
+  </li>
+</ul>
+
+<hr />
+
+<strong>{{ onlineFoodShipping.Name }}</strong>
+<strong>{{ onlineFoodShipping.locaion }}</strong>
+
+<ul>
+  <li *ngFor="let item of FirstamEmployees">
+    <strong>{{ item.EmpID }} ---- {{ item.EmpName }}</strong>
+  </li>
+</ul>
+
+<!-- table which contains the rows -->
+
+<div [ngSwitch]="switchName">
+  <div *ngSwitchCase="'FanSwitch'">You are on the Fan.</div>
+  <div *ngSwitchCase="'LightSwitch'">You are on the Light.</div>
+  <div *ngSwitchCase="'WaterSwitch'">You are on the Motor.</div>
+  <div *ngSwitchDefault>Switches are not available....</div>
+</div>
+
+<br />
+<br />
+<br />
+<br />
