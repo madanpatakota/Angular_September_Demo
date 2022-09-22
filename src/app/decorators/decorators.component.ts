@@ -17,9 +17,8 @@ export class DecoratorsComponent {
 
   evtSubmit1() {
     // console.log("From parameter i mean that without viewchild" ,elementRef);
-   
     // console.log("using viewchild" , this._vRef);
-    //console.log(elementRef.value);
+    // console.log(elementRef.value);
     console.log(this._vRef.nativeElement.value);
   }
   evtSubmit2(elementRef: any) {

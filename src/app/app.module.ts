@@ -7,6 +7,7 @@ import { DataBindComponent } from './data-bind/data-bind.component';
 import { FormsModule } from '@angular/forms';
 import { DemoDirComponent } from './demo-dir/demo-dir.component';
 import { DecoratorsComponent } from './decorators/decorators.component';
+import { CustomBindingComponent } from './custom-binding/custom-binding.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { DecoratorsComponent } from './decorators/decorators.component';
     DemoComponent,
     DataBindComponent,
     DemoDirComponent,
-    DecoratorsComponent
+    DecoratorsComponent,
+    CustomBindingComponent
   ],
   imports: [
     BrowserModule,

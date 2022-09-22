@@ -54,7 +54,9 @@ until and then it should't render.
 </div>
 
 <ng-template #help>
-  <p>You do't have the permission to see the customer details</p>
+
+    <!-- template or element  -->
+  <!-- <p>You do't have the permission to see the customer details</p> -->
 </ng-template>
 
 <hr />
@@ -92,8 +94,12 @@ ngFor is structual directives which deails multi values -->
 
 <!-- table which contains the rows -->
 
-<div [ngSwitch]="switchName">
-  <div *ngSwitchCase="'FanSwitch'">You are on the Fan.</div>
+<!-- roles  -->
+
+<!-- Admin Enduser SuperAdmin SalesRep  Instructor -->
+<div [ngSwitch]="switchName">  
+   <!-- what might be the valeu -->
+  <div *ngSwitchCase="'Admin'">You are on the Fan.</div>
   <div *ngSwitchCase="'LightSwitch'">You are on the Light.</div>
   <div *ngSwitchCase="'WaterSwitch'">You are on the Motor.</div>
   <div *ngSwitchDefault>Switches are not available....</div>

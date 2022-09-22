@@ -9,12 +9,52 @@ index.html
 conatins the app-root referece
 this app-root contains the templateurl information -->
 
-
 <!-- <app-data-bind></app-data-bind> -->
 
 <!-- <app-demo-dir></app-demo-dir> -->
 
-<app-decorators></app-decorators>
+<!-- <app-decorators></app-decorators> -->
+
+<!-- <button id="btnid" onclick="somehting()"></button> -->
+
+<!-- angular component -->
+<!-- 
+if i am going to assign this propery or event to the angular element 
+what is the use of that?
+A : we can simply share the data to the respective angular element -->
+<!-- 
+custom propery data binding
+custom event data binding -->
+
+<!-- <button [value]="___" (click)="" ></button> -->
+
+<p>
+  I have expected the value is : <strong>{{ expectedValue }}</strong>
+</p>
+<!-- 
+Q) Like content in the paragraph , can i create the content in the 
+   component ( appcustombinding) ?
+A : Yes : if you take the ngcontent in the respecitve 
+     element(custombindingcomponet) then you can receive the content
+
+Q) what is the use of that?
+   i can take the content and print into the child component -->
+
+<!-- <input type="text" [(ngModel)]="cname" />  -->
 
 
+<div style="background-color: red">
+  <app-custom-binding [coursename]="cname" (evtFired)="appfired($event)">
+    <!-- you have to pass the some information to the custom bidning -->
+    <div class="first">
+      <p>
+        Class is about the Custom property Binding and custom event databinding
+      </p>
+    </div>
 
+    <div class="second">
+      <input type="text" />
+    </div>
+
+  </app-custom-binding>
+</div>
