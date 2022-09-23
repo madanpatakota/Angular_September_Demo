@@ -59,6 +59,17 @@ Third Step : push the code into the Repo.
 
 
 
+Q) more than 2 ng-template
+
+it would't be render whenever reference is going to call then only it will trigger.
+
+
+
+i wanted to load the ng-template based on the some condition
+
+2 
+
+
 
 
 

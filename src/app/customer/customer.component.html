@@ -1,0 +1,76 @@
+<!-- ramayana -- kumbakarana --- wehn ravana is oing to call then only it will do the action -->
+
+<!-- ng container which holds the templates -->
+<ng-container
+  *ngTemplateOutlet="
+    customOfficeDetails;
+    context: {
+      $implicit: 'Infosis',
+      notification: 'Today is we are having the audit...'
+    }
+  "
+>
+</ng-container>
+
+<ng-template #customLocationDetails>
+  <p>Customer Location Details</p>
+</ng-template>
+
+<ng-template #customOfficeDetails let-officeName let-notificationMessage = "notification">
+  <p>Customer Office --{{ officeName }} related Details -- {{notificationMessage}}</p>
+</ng-template>
+
+
+===========================================================================
+<ng-container
+  [ngTemplateOutlet]="customOfficeDetailsTwo"
+  [ngTemplateOutletContext]="{
+    $implicit: 'Wipro',
+    notification: 'Today is we dot having the audit...'
+  }"
+>
+</ng-container>
+
+
+<ng-template #customOfficeDetailsTwo let-officeName let-notificationMessage = "notification">
+    <p>Customer Office --{{ officeName }} related Details -- {{notificationMessage}}</p>
+  </ng-template>
+
+
+
+
+  ======================================================
+<!-- 
+  Q) By default u have loaded templates through ng container 
+     But my i want load the template whenever i am going to click on by button -->
+
+
+     =========================
+
+     <button (click)="evtSubmit()">Click</button>
+
+     <ng-container #container>
+     </ng-container>
+
+     <ng-template let-notficationmessage="notifcation" #template>
+          <p>Customer component loaded.........
+            {{notficationmessage}}</p>
+     </ng-template>
+
+
+     ================================================
+
+     <ng-container 
+     [ngTemplateOutlet]="capturetemplate">
+     </ng-container>
+
+
+     ================================================
+    
+     <div>Handles with ngConent</div>
+     <!-- <ng-content></ng-content> -->
+     <ng-container [ngTemplateOutlet]="_contentTemplateA">
+     </ng-container>
+
+     --------------------
+

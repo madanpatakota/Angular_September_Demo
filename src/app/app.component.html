@@ -27,10 +27,10 @@ custom propery data binding
 custom event data binding -->
 
 <!-- <button [value]="___" (click)="" ></button> -->
-
+<!-- 
 <p>
   I have expected the value is : <strong>{{ expectedValue }}</strong>
-</p>
+</p> -->
 <!-- 
 Q) Like content in the paragraph , can i create the content in the 
    component ( appcustombinding) ?
@@ -42,10 +42,10 @@ Q) what is the use of that?
 
 <!-- <input type="text" [(ngModel)]="cname" />  -->
 
-
-<div style="background-color: red">
+ <!-- you have to pass the some information to the custom bidning -->
+<!-- <div style="background-color: red">
   <app-custom-binding [coursename]="cname" (evtFired)="appfired($event)">
-    <!-- you have to pass the some information to the custom bidning -->
+   
     <div class="first">
       <p>
         Class is about the Custom property Binding and custom event databinding
@@ -57,4 +57,26 @@ Q) what is the use of that?
     </div>
 
   </app-custom-binding>
-</div>
+</div> -->
+
+
+
+<app-customer 
+[capturetemplate] = "templateA">
+  <ng-template #templateA>
+      <div style="background-color:yellow">Content A from Template A</div>
+  </ng-template>
+  <ng-template #templateB>
+    <div style="background-color:green">Content B from Template B</div>
+  </ng-template>
+</app-customer>
+
+
+<!-- Take the same compent give the
+   elements and capture by the ngcontent -->
+<!-- 
+<app-customer>
+  <input type="text" />
+</app-customer> -->
+
+

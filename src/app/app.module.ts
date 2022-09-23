@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { DemoDirComponent } from './demo-dir/demo-dir.component';
 import { DecoratorsComponent } from './decorators/decorators.component';
 import { CustomBindingComponent } from './custom-binding/custom-binding.component';
+import { CustomerComponent } from './customer/customer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CustomBindingComponent } from './custom-binding/custom-binding.componen
     DataBindComponent,
     DemoDirComponent,
     DecoratorsComponent,
-    CustomBindingComponent
+    CustomBindingComponent,
+    CustomerComponent
   ],
   imports: [
     BrowserModule,
