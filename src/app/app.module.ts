@@ -9,6 +9,8 @@ import { DemoDirComponent } from './demo-dir/demo-dir.component';
 import { DecoratorsComponent } from './decorators/decorators.component';
 import { CustomBindingComponent } from './custom-binding/custom-binding.component';
 import { CustomerComponent } from './customer/customer.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { CustomerComponent } from './customer/customer.component';
     DemoDirComponent,
     DecoratorsComponent,
     CustomBindingComponent,
-    CustomerComponent
+    CustomerComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
