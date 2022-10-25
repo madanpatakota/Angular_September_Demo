@@ -15,4 +15,14 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'Angular_September_Demo';
+
+  expectedValue = "";
+
+  cname = 'Angular';
+
+  appfired(value:any){
+     console.log(value);
+     this.expectedValue = value;
+  }
+
 }

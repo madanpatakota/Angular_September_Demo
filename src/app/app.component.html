@@ -11,7 +11,9 @@
     }
 </style>
 
+<!-- <app-data-bind></app-data-bind> -->
 
+<<<<<<< HEAD
 <style>
     th,
     td {
@@ -122,3 +124,77 @@
         document.getElementById("demo").innerHTML = "hi Javascript!";
     </script>
 </body>
+=======
+<!-- <app-demo-dir></app-demo-dir> -->
+
+<!-- <app-decorators></app-decorators> -->
+
+<!-- <button id="btnid" onclick="somehting()"></button> -->
+
+<!-- angular component -->
+<!-- 
+if i am going to assign this propery or event to the angular element 
+what is the use of that?
+A : we can simply share the data to the respective angular element -->
+<!-- 
+custom propery data binding
+custom event data binding -->
+
+<!-- <button [value]="___" (click)="" ></button> -->
+<!-- 
+<p>
+  I have expected the value is : <strong>{{ expectedValue }}</strong>
+</p> -->
+<!-- 
+Q) Like content in the paragraph , can i create the content in the 
+   component ( appcustombinding) ?
+A : Yes : if you take the ngcontent in the respecitve 
+     element(custombindingcomponet) then you can receive the content
+
+Q) what is the use of that?
+   i can take the content and print into the child component -->
+
+<!-- <input type="text" [(ngModel)]="cname" />  -->
+
+ <!-- you have to pass the some information to the custom bidning -->
+<!-- <div style="background-color: red">
+  <app-custom-binding [coursename]="cname" (evtFired)="appfired($event)">
+   
+    <div class="first">
+      <p>
+        Class is about the Custom property Binding and custom event databinding
+      </p>
+    </div>
+
+    <div class="second">
+      <input type="text" />
+    </div>p
+
+  </app-custom-binding>
+</div> -->
+
+
+
+<!-- <app-customer 
+[capturetemplate] = "templateA">
+  <ng-template #templateA>
+      <div style="background-color:yellow">Content A from Template A</div>
+  </ng-template>
+  <ng-template #templateB>
+    <div style="background-color:green">Content B from Template B</div>
+  </ng-template>
+</app-customer> -->
+
+
+<!-- Take the same compent give the
+   elements and capture by the ngcontent -->
+<!-- 
+<app-customer>
+  <input type="text" />
+</app-customer> -->
+
+
+
+
+<app-child></app-child>
+>>>>>>> fd3a055d0540856d72ef7f5cd5561e0c0b2a4157
