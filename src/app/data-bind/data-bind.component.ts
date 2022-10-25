@@ -1,27 +1,28 @@
-<<<<<<< HEAD
-import { Component, OnInit } from '@angular/core';
-=======
-import { Component } from '@angular/core';
->>>>>>> 1037745d9885e7fa7dc9600fe44828343443eeff
 
+import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-data-bind',
   templateUrl: './data-bind.component.html',
-<<<<<<< HEAD
   styleUrls: ['./data-bind.component.css']
 })
-export class DataBindComponent implements OnInit {
+export class DataBindcomponent implements OnInit {
+Fired() {
+throw new Error('Method not implemented.');
+}
+evtControlCheck() {
+throw new Error('Method not implemented.');
+}
+controlType: any;
+Location: any;
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
 =======
-  styleUrls: ['./data-bind.component.css'],
-})
-export class DataBindComponent {
-  
+  styleUrls!: ['./data-bind.component.css']
+  export class DataBindComponent {
+  }
  
   controlNumber = 10;
   controlType = "text";
@@ -62,19 +63,3 @@ export class DataBindComponent {
   evtControlCheck(){
     this.control();
   }
-
-
-
-  // i want to apply the my stuff to the property of the element then you can
-  // use property databinding.
-
-  // 1. i did't write var or let or const to here while i declare the CourseName
-  // //Analysis and tell me tomoorow
-
-  // Same code by using if elseif else condition
-
-  // iam not declaring the function name
-  // directluy i am writng the method name.
-  // analysis
->>>>>>> 1037745d9885e7fa7dc9600fe44828343443eeff
-}
